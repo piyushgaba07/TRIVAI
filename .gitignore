@@ -1,0 +1,26 @@
+# Node / Next.js
+node_modules/
+.next/
+
+# Env files
+.env
+.env.*
+.env.local
+backend/.env
+
+# Python
+__pycache__/
+*.py[cod]
+backend/venv/
+
+# Databases & local state
+backend/sql_app.db
+*.db
+
+# Editor / OS
+.DS_Store
+.vscode/
+.idea/
+
+# Game outputs / runtime outputs
+backend/game_outputs/

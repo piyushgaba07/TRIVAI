@@ -1,0 +1,20 @@
+# Frontend files
+.next/
+node_modules/
+public/
+styles/
+components/
+app/
+hooks/
+lib/
+
+# Environment and config
+.env*
+!.env.example
+.vercel/
+.idea/
+.vscode/
+*.log
+*.md
+.gitignore
+README.md
