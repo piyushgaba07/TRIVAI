@@ -2,6 +2,7 @@ import type React from "react"
 import "./globals.css"
 import type { Metadata, Viewport } from "next"
 import { Toaster } from "@/components/ui/toaster"
+import { Analytics } from "@vercel/analytics/react"
 
 export const metadata: Metadata = {
   title: {
@@ -61,12 +62,18 @@ export const metadata: Metadata = {
       { url: '/favicon.ico' },
       { url: '/favicon-16x16.png', sizes: '16x16', type: 'image/png' },
       { url: '/favicon-32x32.png', sizes: '32x32', type: 'image/png' },
+      // Use your logo as a favicon alternative
+      { url: '/logo.svg', type: 'image/svg+xml' },
     ],
     apple: [
       { url: '/apple-touch-icon.png' },
+      // Use your logo for Apple devices
+      { url: '/logo.svg' },
     ],
     other: [
       { rel: 'mask-icon', url: '/safari-pinned-tab.svg', color: '#5bbad5' },
+      // Add a shortcut icon for better compatibility
+      { rel: 'shortcut icon', url: '/favicon.ico' },
     ],
   },
   manifest: '/site.webmanifest',
@@ -126,6 +133,7 @@ export default function RootLayout({
       <body className="min-h-screen bg-grid-pattern">
         {children}
         <Toaster />
+        <Analytics />
       </body>
     </html>
   )
